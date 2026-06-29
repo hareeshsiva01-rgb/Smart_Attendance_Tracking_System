@@ -8,6 +8,12 @@ import EmployeeLeave from '../pages/employee/Leave'
 import EmployeeProfile from '../pages/employee/Profile'
 import ManagerDashboard from '../pages/manager/Dashboard'
 import ManagerAttendance from '../pages/manager/Attendance'
+import ManagerTeam from '../pages/manager/Team'
+import ManagerApprovals from '../pages/manager/Approvals'
+import ManagerLeave from '../pages/manager/Leave'
+import ManagerSettings from '../pages/manager/Settings'
+import OrganizerDashboard from '../pages/organizer/Dashboard'
+import OrganizerAttendance from '../pages/organizer/Attendance'
 
 export default function AppRoutes() {
   return (
@@ -23,6 +29,13 @@ export default function AppRoutes() {
       <Route path="/manager" element={<ManagerDashboard />} />
       <Route path="/manager/dashboard" element={<ManagerDashboard />} />
       <Route path="/manager/attendance" element={<ManagerAttendance />} />
+      <Route path="/manager/team" element={<ManagerTeam />} />
+      <Route path="/manager/approvals" element={<ManagerApprovals />} />
+      <Route path="/manager/leave" element={<ManagerLeave />} />
+      <Route path="/manager/settings" element={<ManagerSettings />} />
+      <Route path="/organizer" element={<OrganizerDashboard />} />
+      <Route path="/organizer/dashboard" element={<OrganizerDashboard />} />
+      <Route path="/organizer/attendance" element={<OrganizerAttendance />} />
     </Routes>
   )
 }

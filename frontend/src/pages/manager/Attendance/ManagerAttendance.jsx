@@ -134,6 +134,17 @@ function TechBackground() {
         <rect x="24" y="24" width="292" height="172" rx="28" stroke="currentColor" strokeWidth="4" />
         <path d="M50 142h64l22-32 34 54 26-32h92" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
       </svg>
+      <svg viewBox="0 0 280 280" className="absolute left-[20rem] top-52 hidden h-60 w-60 text-amber-500/30 lg:block" fill="none" aria-hidden="true">
+        <circle cx="140" cy="120" r="84" stroke="currentColor" strokeWidth="4" strokeDasharray="10 10" />
+        <circle cx="140" cy="120" r="52" stroke="currentColor" strokeWidth="4" />
+        <path d="M140 204s58-43 58-92a58 58 0 0 0-116 0c0 49 58 92 58 92z" stroke="currentColor" strokeWidth="5" />
+        <circle cx="140" cy="112" r="18" stroke="currentColor" strokeWidth="5" />
+      </svg>
+      <svg viewBox="0 0 300 220" className="absolute bottom-[20rem] right-[18%] hidden h-52 w-72 text-amber-500/30 lg:block" fill="none" aria-hidden="true">
+        <rect x="30" y="28" width="240" height="164" rx="26" stroke="currentColor" strokeWidth="4" />
+        <path d="M30 72h240M82 28v44M218 28v44" stroke="currentColor" strokeWidth="4" />
+        <path d="M66 104h28M126 104h28M186 104h28M66 142h28M126 142h28M186 142h28" stroke="currentColor" strokeWidth="7" strokeLinecap="round" />
+      </svg>
     </div>
   )
 }
@@ -145,7 +156,21 @@ function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-72 overflow-hidden border-r border-amber-200/70 bg-[#FFF7DF] px-5 py-7 shadow-[22px_0_90px_rgba(212,175,55,0.16)] lg:flex lg:flex-col">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_8%,rgba(245,158,11,0.22),transparent_28%),radial-gradient(circle_at_86%_28%,rgba(212,175,55,0.2),transparent_30%),linear-gradient(160deg,rgba(255,255,255,0.92),rgba(255,248,230,0.82)_48%,rgba(255,253,247,0.96))]" />
-      <div className="relative flex items-center gap-4 rounded-[28px] border border-white/70 bg-white/70 p-4 shadow-[0_22px_70px_rgba(212,175,55,0.16)] backdrop-blur-xl">
+      <svg viewBox="0 0 260 260" className="pointer-events-none absolute -left-20 top-28 h-52 w-52 text-amber-500/35" fill="none" aria-hidden="true">
+        <circle cx="130" cy="130" r="108" stroke="currentColor" strokeWidth="4" />
+        <circle cx="130" cy="130" r="76" stroke="currentColor" strokeWidth="4" strokeDasharray="8 10" />
+        <path d="M130 130 216 74M130 22v216M22 130h216" stroke="currentColor" strokeWidth="3" />
+      </svg>
+      <svg viewBox="0 0 300 220" className="pointer-events-none absolute -right-24 top-[45%] h-44 w-64 text-amber-500/30" fill="none" aria-hidden="true">
+        <rect x="30" y="28" width="240" height="164" rx="26" stroke="currentColor" strokeWidth="4" />
+        <path d="M30 72h240M82 28v44M218 28v44" stroke="currentColor" strokeWidth="4" />
+        <path d="M66 104h28M126 104h28M186 104h28M66 142h28M126 142h28" stroke="currentColor" strokeWidth="7" strokeLinecap="round" />
+      </svg>
+      <svg viewBox="0 0 280 280" className="pointer-events-none absolute -left-12 bottom-16 h-44 w-44 text-amber-500/30" fill="none" aria-hidden="true">
+        <path d="M140 204s58-43 58-92a58 58 0 0 0-116 0c0 49 58 92 58 92z" stroke="currentColor" strokeWidth="5" />
+        <circle cx="140" cy="112" r="18" stroke="currentColor" strokeWidth="5" />
+      </svg>
+      <div className="relative flex items-center gap-4 rounded-[28px] border border-white/70 bg-white/70 p-4 shadow-[0_22px_70px_rgba(212,175,55,0.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/85">
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-xl font-bold text-white shadow-[0_18px_45px_rgba(245,158,11,0.35)]">P</div>
         <div>
           <p className="text-lg font-semibold text-[#1A1A1A]">Presentia</p>
@@ -161,7 +186,7 @@ function Sidebar() {
           </a>
         ))}
       </nav>
-      <div className="relative mt-auto rounded-[32px] border border-white/80 bg-white/70 p-4 shadow-[0_18px_60px_rgba(212,175,55,0.16)] backdrop-blur-xl">
+      <div className="relative mt-auto rounded-[32px] border border-white/80 bg-white/70 p-4 shadow-[0_18px_60px_rgba(212,175,55,0.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/85">
         <div className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500 text-base font-bold text-white">M</div>
           <div className="min-w-0 flex-1">
@@ -293,8 +318,8 @@ export default function ManagerAttendance() {
                 <h2 className="mt-3 text-4xl font-semibold tracking-tight text-[#1A1A1A] sm:text-5xl">Attendance Calendar</h2>
                 <p className="mt-3 text-base text-[#6B5C3B] sm:text-lg">Overview of your monthly attendance.</p>
               </div>
-              <button type="button" className="inline-flex w-fit items-center gap-3 rounded-2xl border border-amber-200 bg-white px-6 py-4 text-sm font-semibold text-[#1A1A1A] shadow-[0_16px_45px_rgba(212,175,55,0.12)] transition hover:bg-[#FFF8E6]">
-                <Icon name="print" />
+              <button type="button" className="inline-flex h-11 w-fit items-center gap-2 rounded-xl border border-amber-200 bg-white px-4 text-sm font-semibold text-[#1A1A1A] shadow-[0_16px_45px_rgba(212,175,55,0.12)] transition hover:bg-[#FFF8E6]">
+                <Icon name="print" className="h-4 w-4" />
                 Print Report
               </button>
             </section>

@@ -43,6 +43,11 @@ export default function LoginPage() {
         return;
       }
 
+      if (normalizedEmail === 'organizer@company.com') {
+        navigate('/organizer/dashboard');
+        return;
+      }
+
       setFormError('No dashboard is assigned to this email yet.');
       return;
     }

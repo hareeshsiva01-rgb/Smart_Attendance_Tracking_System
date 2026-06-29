@@ -131,6 +131,17 @@ function TechBackground() {
         <rect x="24" y="24" width="292" height="172" rx="28" stroke="currentColor" strokeWidth="4" />
         <path d="M50 142h64l22-32 34 54 26-32h92" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
       </svg>
+      <svg viewBox="0 0 260 260" className="absolute left-[20rem] top-48 hidden h-60 w-60 text-amber-500/30 drop-shadow-[0_18px_40px_rgba(245,158,11,0.12)] lg:block" fill="none" aria-hidden="true">
+        <circle cx="130" cy="130" r="106" stroke="currentColor" strokeWidth="4" strokeDasharray="14 10" />
+        <circle cx="130" cy="130" r="74" stroke="currentColor" strokeWidth="4" />
+        <path d="M82 92V66h26M178 66h26v26M82 168v26h26M178 194h26v-26" stroke="currentColor" strokeWidth="5" />
+        <path d="M104 136h52M112 166c13 10 31 10 44 0" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      </svg>
+      <svg viewBox="0 0 280 280" className="absolute bottom-[18rem] right-[18%] hidden h-64 w-64 text-amber-500/30 lg:block" fill="none" aria-hidden="true">
+        <path d="M140 32 220 62v68c0 58-32 94-80 118-48-24-80-60-80-118V62z" stroke="currentColor" strokeWidth="5" />
+        <circle cx="140" cy="126" r="32" stroke="currentColor" strokeWidth="5" />
+        <path d="M140 158v44M122 202h36" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+      </svg>
     </div>
   )
 }
@@ -145,9 +156,19 @@ function Sidebar() {
       <svg viewBox="0 0 260 260" className="pointer-events-none absolute -left-20 top-28 h-52 w-52 text-amber-500/35" fill="none" aria-hidden="true">
         <circle cx="130" cy="130" r="106" stroke="currentColor" strokeWidth="4" strokeDasharray="14 10" />
         <circle cx="130" cy="130" r="74" stroke="currentColor" strokeWidth="4" />
+        <path d="M82 92V66h26M178 66h26v26M82 168v26h26M178 194h26v-26" stroke="currentColor" strokeWidth="5" />
+      </svg>
+      <svg viewBox="0 0 260 260" className="pointer-events-none absolute -right-16 top-72 h-44 w-44 text-amber-500/30" fill="none" aria-hidden="true">
+        <circle cx="130" cy="130" r="108" stroke="currentColor" strokeWidth="4" />
+        <circle cx="130" cy="130" r="76" stroke="currentColor" strokeWidth="4" strokeDasharray="8 10" />
+        <path d="M130 130 216 74M130 22v216M22 130h216" stroke="currentColor" strokeWidth="3" />
+      </svg>
+      <svg viewBox="0 0 340 220" className="pointer-events-none absolute -right-24 bottom-24 h-44 w-64 text-amber-500/30" fill="none" aria-hidden="true">
+        <rect x="24" y="24" width="292" height="172" rx="28" stroke="currentColor" strokeWidth="4" />
+        <path d="M50 142h64l22-32 34 54 26-32h92" stroke="currentColor" strokeWidth="5" />
       </svg>
 
-      <div className="relative flex items-center gap-4 rounded-[28px] border border-white/70 bg-white/70 p-4 shadow-[0_22px_70px_rgba(212,175,55,0.16)] backdrop-blur-xl">
+      <div className="relative flex items-center gap-4 rounded-[28px] border border-white/70 bg-white/70 p-4 shadow-[0_22px_70px_rgba(212,175,55,0.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/85">
         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-xl font-bold text-white shadow-[0_18px_45px_rgba(245,158,11,0.35)]">P</div>
         <div>
           <p className="text-lg font-semibold text-[#1A1A1A]">Presentia</p>
@@ -173,7 +194,7 @@ function Sidebar() {
         ))}
       </nav>
 
-      <div className="relative mt-auto rounded-[32px] border border-white/80 bg-white/70 p-4 shadow-[0_18px_60px_rgba(212,175,55,0.16)] backdrop-blur-xl">
+      <div className="relative mt-auto rounded-[32px] border border-white/80 bg-white/70 p-4 shadow-[0_18px_60px_rgba(212,175,55,0.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/85">
         <div className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500 text-base font-bold text-white">M</div>
           <div className="min-w-0 flex-1">
@@ -313,8 +334,8 @@ export default function ManagerDashboard() {
                         </div>
                         {request.status === 'Pending' ? (
                           <div className="flex gap-3">
-                            <button className="rounded-2xl border border-rose-200 bg-white px-5 py-2.5 text-sm font-semibold text-rose-600 transition hover:bg-rose-50">Reject</button>
-                            <button className="rounded-2xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-600">Approve</button>
+                            <button className="h-10 rounded-xl border border-rose-200 bg-white px-5 text-sm font-semibold text-rose-600 transition hover:bg-rose-50">Reject</button>
+                            <button className="h-10 rounded-xl bg-amber-500 px-5 text-sm font-semibold text-white transition hover:bg-amber-600">Approve</button>
                           </div>
                         ) : (
                           <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Approved</span>
